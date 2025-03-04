@@ -14,7 +14,7 @@ namespace BannerKings.Models.Vanilla
         {
             EquipmentElement result = base.GetLootedItemFromTroop(character, targetValue);
             float scale = BannerKingsSettings.Instance.LootScale;
-            if (!result.Equals(default(EquipmentElement)) && scale > MBRandom.RandomFloat)
+            if (!result.Equals(default(EquipmentElement)) && scale < MBRandom.RandomFloat)
             {
                 result = default(EquipmentElement);
             }
